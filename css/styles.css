@@ -1,0 +1,976 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    transition: all 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gray);
+}
+
+:root {
+    --grey: #475467;
+    --black: #0D0C0C;
+}
+
+.header {
+    width: 100%;
+    height: 106px;
+    background-color: #ffffff48;
+    backdrop-filter: blur(15px);
+    position: fixed;
+    z-index: 9;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.star {
+    color: #ff6868;
+    position: absolute;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+.shop__image img {
+    width: 90%;
+}
+
+.payment__card .icon__card {
+    position: absolute;
+    z-index: 100;
+    top: 45px;
+    left: 48px;
+    width: 64px;
+    height: 64px;
+}
+
+.payment__card .icon__card__va {
+    position: absolute;
+    z-index: 100;
+    top: 55px;
+    right: 58px;
+    width: 82px;
+    height: 41px;
+}
+
+.payment__card .text__card {
+    position: absolute;
+    z-index: 100;
+    bottom: 40px;
+    left: 112px;
+}
+
+.payment__card .text__card p {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.header__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo img {
+    height: 51px;
+    width: 51px;
+    margin-right: 40px;
+}
+
+.header__nav {
+    display: flex;
+    margin: 0 20px;
+}
+
+.list__of__buttons {
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+
+.list__button {
+    padding: 8px 10px;
+    border-radius: 12px;
+    background-color: transparent;
+    color: var(--grey);
+    border: 1px solid #47546759;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.profile__button {
+    background-color: var(--black);
+    color: #fff;
+    border: 0;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Добавлено для эффекта подъема при наведении */
+.profile__button:hover {
+    transform: translateY(-5px);
+}
+
+.header__burger {
+    display: none;
+}
+
+.intro {
+    width: 100%;
+    height: 900px;
+    background: url(../images/line_1.webp) no-repeat;
+}
+
+.intro__content,
+.intro__image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro__image {
+    width: 663px;
+    height: 600px;
+    background-color: #f1f5f9;
+    justify-content: center;
+    border-radius: 33px;
+}
+
+.title__text {
+    font-size: calc(36px + 18 * ((100vw - 320px) / (1280 - 320)));
+    font-weight: 600;
+    color: var(--black);
+}
+
+.footer__regular__text,
+.regular__text {
+    font-size: calc(16px + 6 * ((100vw - 320px) / (1280 - 320)));
+    font-weight: 400;
+    color: var(--grey);
+}
+
+.footer__regular__text {
+    font-size: calc(16px + 4 * ((100vw - 320px) / (1280 - 320)));
+    line-height: 1.5;
+}
+
+.intro__text {
+    width: 50%;
+}
+
+.intro__text p {
+    padding: 28px 0 100px;
+}
+
+.intro__text a button {
+    font-size: 24px;
+}
+
+.btn__line {
+    width: 100%;
+    align-items: start;
+    display: flex;
+}
+
+.btn__line img {
+    margin-left: 30px;
+    transform: rotate(20deg);
+    transform: scale(0.7);
+}
+
+.info {
+    width: 100%;
+    overflow: hidden;
+}
+
+.info .container .intro__content:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.avatar {
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.avatar,
+.avatar img,
+.inner__card,
+.inner__card img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner__card img {
+    height: 100%;
+    width: 100%;
+    object-fit: inherit;
+}
+
+.info__img,
+.info__text {
+    width: 60%;
+    height: 100%;
+}
+
+.info__text h1 {
+    padding-bottom: 15px;
+}
+
+.info__img {
+    width: 40%;
+}
+
+.cards {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.cards__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.card {
+    border-radius: 15px;
+    width: 490px;
+    height: 366px;
+    background: url(../images/cardbg.webp);
+    box-shadow: 0 20px 99px 0 rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.card__centred__icon,
+.card__icon {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__centred__icon {
+    width: 110px;
+    height: 110px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.card__text {
+    padding: 31px;
+}
+
+.card__text h2 {
+    font-weight: 500;
+    font-size: 31px;
+    line-height: 99%;
+    color: var(--black);
+}
+
+.card__text p {
+    font-weight: 400;
+    padding-top: 5px;
+    line-height: 110%;
+    color: var(--grey);
+}
+
+.discord__img img {
+    padding-top: 200px;
+}
+
+.faq {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.faq__content {
+    display: block;
+}
+
+.faq__text p {
+    padding-bottom: 60px;
+}
+
+.faq__section {
+    width: 100%;
+}
+
+.accordion__control {
+    width: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.inner__card .icon {
+    position: relative;
+    z-index: 20;
+}
+
+.lines__burger {
+    width: 35px;
+    height: 3px;
+    background-color: #000;
+    margin: 6px 0;
+}
+
+.accordion__content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    will-change: max-height;
+    transition: all 0.3s ease-out;
+    box-sizing: content-box;
+}
+
+.accordion__icon {
+    transition: transform 0.3s ease-out;
+}
+
+.open .accordion__icon::after {
+    width: 0;
+}
+
+.open .accordion__content {
+    opacity: 1;
+    padding: 0 0 20px 20px;
+}
+
+.payment__content {
+    overflow: hidden;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+button {
+    border: 0;
+}
+
+.accordion__control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 20px;
+    border-top: 1px solid #888;
+}
+
+.accordion__control::-webkit-details-marker {
+    display: none;
+}
+
+.accordion__title {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--black);
+    margin: 0 20px 0 0;
+}
+
+.accordion__icon {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #bfbfbf;
+}
+
+.accordion__icon::after,
+.accordion__icon::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 1px;
+    background-color: #000;
+    transform: translate(-50%, -50%);
+}
+
+ul {
+    list-style: none;
+}
+
+.accordion__icon::after {
+    width: 1px;
+    height: 50%;
+}
+
+.accordion__content {
+    border-top: 1px solid transparent;
+    color: var(--grey);
+    font-size: 20px;
+}
+
+.accordion[open] .accordion__icon {
+    transform: rotate(45deg);
+}
+
+.discord {
+    padding: 0;
+}
+
+.discord__content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.discord__text {
+    width: 60%;
+    height: 100%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.discord__text .title__text {
+    padding-bottom: 16px;
+}
+
+.discord__text .regular__text {
+    padding-bottom: 100px;
+}
+
+.profile__button {
+    padding: 20px 25px;
+}
+
+.intro {
+    overflow: hidden;
+}
+
+.header .profile__button,
+.intro .profile__button {
+    box-shadow: 0 5px 5px rgba(13, 12, 12, 0.2);
+}
+
+.discord__img {
+    width: 52%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    width: 100%;
+    height: 280px;
+    background-color: #f1f5f9;
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.footer__first__pat,
+.footer__second__part {
+    height: 100%;
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__second__part {
+    width: 373px;
+}
+
+.footer__icons,
+.icon__bg {
+    display: flex;
+    align-items: center;
+}
+
+.icon__bg {
+    width: 57px;
+    height: 57px;
+    justify-content: center;
+    border-radius: 100%;
+    border: 1px solid #d0d5dd;
+}
+
+.footer__icons {
+    width: 100%;
+    justify-content: space-between;
+    white-space: pre-wrap;
+}
+
+.footer__second__part .footer__inner__text {
+    text-align: end;
+}
+
+.shop {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.form__dates,
+.forms_server {
+    display: flex;
+    flex-direction: column;
+    width: 656px;
+}
+
+.forms_server {
+    width: 1350px;
+}
+
+.shop__content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.form-container,
+.forms-container {
+    display: block;
+    width: 50%;
+}
+
+.shop__image {
+    width: 50%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+form input,
+form label,
+select {
+    font-size: 22px;
+    color: var(--grey);
+}
+
+form input,
+select {
+    margin-bottom: 25px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px solid var(--grey);
+}
+
+form button {
+    width: 656px;
+    border-radius: 16px;
+    height: 55px;
+    font-size: 22px;
+    background-color: #000;
+    color: #fff;
+}
+
+form label {
+    font-weight: 500;
+    line-height: 135%;
+    padding-bottom: 4px;
+}
+
+form .label::after {
+    content: '*';
+    color: #ff6868;
+}
+
+.profile__button img {
+    width: 10px;
+    height: 10px;
+}
+
+.element-animation {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.inner__card {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 80px;
+}
+
+.inner__card .payment__card__bg__b {
+    position: relative;
+    z-index: 10;
+}
+
+.dropdown,
+.inner__card .payment__card__bg__s {
+    position: relative;
+    z-index: 10;
+    display: none;
+}
+
+.element-animation.element-show {
+    opacity: 1;
+    transition: all 1.3s;
+    transform: translateY(0);
+}
+
+.btn__line::after {
+    content: url(../images/ctaline.webp);
+    position: absolute;
+    margin: -70px 0 0 250px;
+}
+
+.cards h1 {
+    padding-bottom: 30px;
+}
+
+.dropdown {
+    width: 100%;
+    background-color: #fff;
+    padding: 0 16px;
+    opacity: 0;
+    position: absolute;
+    z-index: 100;
+}
+
+.dropdown.open {
+    display: block;
+    padding: 10px 0;
+    opacity: 1;
+}
+
+.dropdown .list__of__buttons {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding-bottom: 20px;
+}
+
+.dropdown .container {
+    padding: 0 10px;
+}
+
+.dropdown .list__item {
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.dropdown .list__button,
+.dropdown .profile__button,
+.overlay {
+    width: 100%;
+}
+
+.dropdown a {
+    padding: 10px 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    display: none;
+}
+
+.profile__content {
+    padding-left: 250px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile__name,
+.role {
+    display: flex;
+    align-items: center;
+}
+
+.role {
+    border: 2.2px solid rgba(71, 84, 103, 0.25);
+    border-radius: 80px;
+    width: 307px;
+    height: 127px;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.25);
+    justify-content: center;
+    margin-top: -220px;
+    margin-bottom: 10px;
+}
+
+.role p {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 68%;
+    color: #b7a2fb;
+}
+
+.profile__name {
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.avatar,
+.welcome {
+    border: 2.2px solid rgba(71, 84, 103, 0.25);
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.welcome {
+    border-radius: 80px;
+    width: 515px;
+    height: 315px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome .name__avatar {
+    font-size: 80px;
+    font-weight: 400;
+}
+
+.welcome .profile__hello {
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 140%;
+    color: #000;
+}
+
+.avatar {
+    border-radius: 92px;
+    padding: 2px 10px 3px;
+    width: 335px;
+    height: 335px;
+}
+
+.payment {
+    width: 100%;
+    height: auto;
+    padding-bottom: 80px;
+}
+
+.payment__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    align-items: center;
+    gap: 30px;
+}
+
+.payment__card {
+    border-radius: 80px;
+    width: 520px;
+    height: 336px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.25);
+    border: 2.2px solid rgba(71, 84, 103, 0.25);
+}
+
+.accordion {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.footer__mobile,
+.header__line {
+    display: none;
+}
+
+.header__profile {
+    position: relative;
+    z-index: 14;
+}
+
+.profile {
+    height: 1000px;
+    max-width: 100vw;
+    background: url(../images/profilebgFrame5322.webp) no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.payment .regular__text {
+    font-size: 40px;
+    font-weight: 400;
+    color: #000;
+    margin: auto;
+}
+
+.payment__content {
+    padding-bottom: 180px;
+}
+
+/* Медиа-запросы */
+
+/* ... (здесь следует продолжить с медиа-запросами, как в вашем оригинальном CSS-коде) */
+
+/* Пример первых нескольких медиа-запросов: */
+
+@media (max-width: 1800px) {
+    .intro {
+        padding-top: 50px;
+    }
+    .container {
+        padding: 0 20px;
+    }
+    .cards__content {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .card {
+        border-radius: 15px;
+        width: 500px;
+        height: 366px;
+    }
+    .forms_server {
+        width: 150%;
+    }
+    .info__img {
+        width: 70%;
+        margin-left: 100px;
+    }
+    .shop__image img {
+        width: 85%;
+        margin-left: 120px;
+    }
+    .discord {
+        padding-bottom: 0;
+        padding-top: 150px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .profile {
+        height: 700px;
+    }
+    .header__content .profile__button {
+        margin: 0 40px;
+    }
+    .list__button {
+        font-size: 20px;
+    }
+    .container {
+        max-width: 1170px;
+    }
+    .intro__image {
+        transform: scale(0.9);
+        z-index: -10;
+    }
+    .discord {
+        padding-bottom: 0;
+        padding-top: 150px;
+    }
+    .discord .profile__button {
+        padding: 22px 60px;
+    }
+    .discord .regular__text {
+        font-size: 28px;
+        padding: 10px;
+    }
+    .btn__line::after {
+        margin: -75px 0 0 165px;
+        transform: scale(0.7) rotate(-5deg);
+    }
+    .profile__content {
+        padding-left: 100px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .discord__img {
+        width: 60%;
+    }
+    .role {
+        border: 2.2px solid rgba(71, 84, 103, 0.25);
+        border-radius: 80px;
+        width: 307px;
+        height: 127px;
+        backdrop-filter: blur(30px);
+        background: rgba(255, 255, 255, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .footer__second__part .footer__inner__text {
+        width: 350px;
+    }
+    .forms_server {
+        width: 200%;
+    }
+    .shop {
+        padding-bottom: 0;
+    }
+    .card {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+    .payment {
+        margin-top: 30px;
+    }
+    .payment__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .info {
+        overflow: hidden;
+    }
+}
+
+/* Продолжить с остальными медиа-запросами аналогично */
